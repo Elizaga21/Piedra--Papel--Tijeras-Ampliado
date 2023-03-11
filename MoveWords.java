@@ -8,14 +8,14 @@ public class MoveWords{
 
 	static final int PAPEL = 1;
 	static final int TIJERAS = 2;
-	static final int SPOCK = 3;
+	static final int sepia = 3;
 	static final int torito = 4;
 
     public static final int EMPATE = 0;
     public static final int GANA = 1;
     public static final int PIERDE = 2;
 
-    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA", "torito", "SPOCK"};
+    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA", "torito", "sepia"};
     private static final String[] validCommands = {"SALIR", "HELP"};
 
     private Random rnd;
@@ -34,13 +34,13 @@ public class MoveWords{
 		vs[PIEDRA][TIJERAS] = "crushes";
 		vs[PIEDRA][torito] = "crushes";
 		vs[PAPEL][PIEDRA] = "covers";
-		vs[PAPEL][SPOCK] = "disaproves";
+		vs[PAPEL][sepia] = "disaproves";
 		vs[TIJERAS][PAPEL] = "cuts";
 		vs[TIJERAS][torito] = "decapitates";
-		vs[SPOCK][PIEDRA] = "vaporizes";
-		vs[SPOCK][TIJERAS] = "smashes";
+		vs[sepia][PIEDRA] = "vaporizes";
+		vs[sepia][TIJERAS] = "smashes";
 		vs[torito][PIEDRA] = "eats";
-		vs[torito][SPOCK] = "poisons";
+		vs[torito][sepia] = "poisons";
 	}
     
     public boolean isValidMoveCommand(String value){
